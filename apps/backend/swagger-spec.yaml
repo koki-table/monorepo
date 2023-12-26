@@ -1,0 +1,81 @@
+openapi: 3.0.0
+paths:
+  /post/{id}:
+    get:
+      operationId: AppController_getPostById
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+    delete:
+      operationId: AppController_deletePost
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /feed:
+    get:
+      operationId: AppController_getPublishedPosts
+      parameters: []
+      responses:
+        '200':
+          description: ''
+  /filtered-posts/{searchString}:
+    get:
+      operationId: AppController_getFilteredPosts
+      parameters:
+        - name: searchString
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+  /post:
+    post:
+      operationId: AppController_createDraft
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  /user:
+    post:
+      operationId: AppController_signupUser
+      parameters: []
+      responses:
+        '201':
+          description: ''
+  /publish/{id}:
+    put:
+      operationId: AppController_publishPost
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+info:
+  title: sample example
+  description: The sample API description
+  version: '1.0'
+  contact: {}
+tags:
+  - name: sample
+    description: ''
+servers: []
+components:
+  schemas: {}
