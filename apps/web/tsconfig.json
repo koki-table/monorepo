@@ -3,9 +3,14 @@
   "compilerOptions": {
     "plugins": [
       {
-        "name": "next"
+        "name": "next",
+        "allowSyntheticDefaultImports": true
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/styles/*": ["styles/*"],
+    },
   },
   "include": [
     "next-env.d.ts",
@@ -13,6 +18,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+    
+, "tailwind.config.ts"  ],
+  "exclude": ["node_modules"],
 }
